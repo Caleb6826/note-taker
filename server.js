@@ -54,7 +54,7 @@ app.post('/api/notes', (req, res) => {
 function deleteNote(id, notesArray) {
     for (let i = 0; i < notesArray.length; i++) {
         let note = notesArray[i];
-
+console.log(note)
         if (note.id == id) {
             notesArray.splice(i, 1);
             fs.writeFileSync(
